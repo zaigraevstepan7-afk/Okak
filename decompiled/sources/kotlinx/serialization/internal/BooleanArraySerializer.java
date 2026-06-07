@@ -1,0 +1,53 @@
+package kotlinx.serialization.internal;
+
+import defpackage.si;
+import defpackage.yq1;
+import kotlin.Metadata;
+import kotlinx.serialization.KSerializer;
+import kotlinx.serialization.builtins.BuiltinSerializersKt;
+import kotlinx.serialization.encoding.CompositeDecoder;
+import kotlinx.serialization.encoding.CompositeEncoder;
+
+/* compiled from: r8-map-id-09617c094fd1d5b705d683180bfdcc3cc35b0c5e13ee7f309dceccc0900ba8d2 */
+@Metadata(d1 = {"\u0000<\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0018\n\u0002\u0018\u0002\n\u0002\u0010\u000b\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0006\bÁ\u0002\u0018\u00002\b\u0012\u0004\u0012\u00020\u00020\u00012\u0014\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u00050\u0003B\t\b\u0002¢\u0006\u0004\b\u0006\u0010\u0007J\u0013\u0010\t\u001a\u00020\b*\u00020\u0002H\u0014¢\u0006\u0004\b\t\u0010\nJ\u0013\u0010\u000b\u001a\u00020\u0005*\u00020\u0002H\u0014¢\u0006\u0004\b\u000b\u0010\fJ\u000f\u0010\r\u001a\u00020\u0002H\u0014¢\u0006\u0004\b\r\u0010\u000eJ/\u0010\u0015\u001a\u00020\u00142\u0006\u0010\u0010\u001a\u00020\u000f2\u0006\u0010\u0011\u001a\u00020\b2\u0006\u0010\u0012\u001a\u00020\u00052\u0006\u0010\u0013\u001a\u00020\u0004H\u0014¢\u0006\u0004\b\u0015\u0010\u0016J'\u0010\u001b\u001a\u00020\u00142\u0006\u0010\u0018\u001a\u00020\u00172\u0006\u0010\u0019\u001a\u00020\u00022\u0006\u0010\u001a\u001a\u00020\bH\u0014¢\u0006\u0004\b\u001b\u0010\u001c¨\u0006\u001d"}, d2 = {"Lkotlinx/serialization/internal/BooleanArraySerializer;", "Lkotlinx/serialization/KSerializer;", "", "Lkotlinx/serialization/internal/PrimitiveArraySerializer;", "", "Lkotlinx/serialization/internal/BooleanArrayBuilder;", "<init>", "()V", "", "collectionSize", "([Z)I", "toBuilder", "([Z)Lkotlinx/serialization/internal/BooleanArrayBuilder;", "empty", "()[Z", "Lkotlinx/serialization/encoding/CompositeDecoder;", "decoder", "index", "builder", "checkIndex", "Lod2;", "readElement", "(Lkotlinx/serialization/encoding/CompositeDecoder;ILkotlinx/serialization/internal/BooleanArrayBuilder;Z)V", "Lkotlinx/serialization/encoding/CompositeEncoder;", "encoder", "content", "size", "writeContent", "(Lkotlinx/serialization/encoding/CompositeEncoder;[ZI)V", "kotlinx-serialization-core"}, k = 1, mv = {2, 2, 0}, xi = yq1.f)
+/* loaded from: classes.dex */
+public final class BooleanArraySerializer extends PrimitiveArraySerializer<Boolean, boolean[], BooleanArrayBuilder> implements KSerializer<boolean[]> {
+    public static final BooleanArraySerializer INSTANCE = new BooleanArraySerializer();
+
+    private BooleanArraySerializer() {
+        super(BuiltinSerializersKt.serializer(si.a));
+    }
+
+    @Override // kotlinx.serialization.internal.PrimitiveArraySerializer
+    public void readElement(CompositeDecoder decoder, int index, BooleanArrayBuilder builder, boolean checkIndex) {
+        decoder.getClass();
+        builder.getClass();
+        builder.append$kotlinx_serialization_core(decoder.decodeBooleanElement(getDescriptor(), index));
+    }
+
+    @Override // kotlinx.serialization.internal.AbstractCollectionSerializer
+    public BooleanArrayBuilder toBuilder(boolean[] zArr) {
+        zArr.getClass();
+        return new BooleanArrayBuilder(zArr);
+    }
+
+    @Override // kotlinx.serialization.internal.PrimitiveArraySerializer
+    public void writeContent(CompositeEncoder encoder, boolean[] content, int size) {
+        encoder.getClass();
+        content.getClass();
+        for (int i = 0; i < size; i++) {
+            encoder.encodeBooleanElement(getDescriptor(), i, content[i]);
+        }
+    }
+
+    @Override // kotlinx.serialization.internal.PrimitiveArraySerializer
+    public boolean[] empty() {
+        return new boolean[0];
+    }
+
+    @Override // kotlinx.serialization.internal.AbstractCollectionSerializer
+    public int collectionSize(boolean[] zArr) {
+        zArr.getClass();
+        return zArr.length;
+    }
+}

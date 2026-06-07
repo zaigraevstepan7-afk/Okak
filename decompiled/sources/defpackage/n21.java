@@ -1,0 +1,25 @@
+package defpackage;
+
+/* compiled from: r8-map-id-09617c094fd1d5b705d683180bfdcc3cc35b0c5e13ee7f309dceccc0900ba8d2 */
+/* loaded from: classes.dex */
+public final class n21 {
+    public final long a;
+
+    public final boolean equals(Object obj) {
+        if (obj instanceof n21) {
+            if (this.a != ((n21) obj).a) {
+                return false;
+            }
+            return true;
+        }
+        return false;
+    }
+
+    public final int hashCode() {
+        return Long.hashCode(this.a);
+    }
+
+    public final String toString() {
+        return "IndirectPointerEventData(packedValue=" + this.a + ')';
+    }
+}

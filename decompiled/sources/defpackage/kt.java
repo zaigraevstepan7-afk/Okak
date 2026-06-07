@@ -1,0 +1,8 @@
+package defpackage;
+
+/* compiled from: r8-map-id-09617c094fd1d5b705d683180bfdcc3cc35b0c5e13ee7f309dceccc0900ba8d2 */
+/* loaded from: classes.dex */
+public final class kt {
+    public static final xl1 a = new xl1(25);
+    public static final xl1 b = new xl1(26);
+}

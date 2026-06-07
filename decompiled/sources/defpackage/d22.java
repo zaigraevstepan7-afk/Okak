@@ -1,0 +1,20 @@
+package defpackage;
+
+import android.view.ViewConfiguration;
+
+/* compiled from: r8-map-id-09617c094fd1d5b705d683180bfdcc3cc35b0c5e13ee7f309dceccc0900ba8d2 */
+/* loaded from: classes.dex */
+public abstract class d22 {
+    public static final float a = ViewConfiguration.getScrollFriction();
+
+    public static final tx a(ur urVar) {
+        c00 c00Var = (c00) urVar.j(is.h);
+        boolean c = urVar.c(c00Var.a());
+        Object L = urVar.L();
+        if (c || L == or.a) {
+            L = new tx(new ov1(c00Var));
+            urVar.h0(L);
+        }
+        return (tx) L;
+    }
+}
